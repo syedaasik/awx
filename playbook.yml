@@ -1,0 +1,7 @@
+---
+- name: First awx role to test
+  hosts: all
+  gather_facts: yes
+  
+  roles:
+    - awx_test_role

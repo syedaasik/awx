@@ -1,0 +1,5 @@
+---
+# tasks file for awx_test_role
+- name: Exeuting uptime command
+  ansible.builtin.shell: uptime
+
