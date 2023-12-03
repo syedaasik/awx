@@ -6,6 +6,12 @@
     state: directory
     mode: '0700'
 
+- name: Ensure authorized_keys file exists, if not create it.
+  ansible.builtin.file:
+    path: ~/.ssh/authorized_keys
+    state: file
+    mode: '0700'
+
 - name: Copying ssh keys
   ansible.builtin.lineinfile:
     path: ~/.ssh/authorized_keys
