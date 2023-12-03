@@ -1,6 +1,0 @@
----
-# tasks file for awx_test_role
-- name: Exeuting "{{ item }}" command
-  ansible.builtin.shell: "{{ item }}"
-  loop: "{{ cmd_list }}"
-

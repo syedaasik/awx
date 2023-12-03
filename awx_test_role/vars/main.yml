@@ -1,6 +1,0 @@
----
-# vars file for awx_test_role
-cmd_list:
-  - whoami
-  - uptime
-  - date
