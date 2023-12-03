@@ -16,4 +16,5 @@
   ansible.builtin.lineinfile:
     path: ~/.ssh/authorized_keys
     state: present
-    line: 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCt8AhbCb1hsIv5IwDIx1PEA5kcDSOFbiXKLfElzKtg1wSljUaUCyMOq7F3wmFWkqXQuEW6pVpjmjeqYPxbF6HwUGl7QBykjr8Nt/E6DEY9s2UJ0PQvpklBpsTtmE24rXaVUg8fh+n8jowI/T4apYj3PFyh+ikSuabHOjqoAQagsJEEUoYl4MbvjEpH93JiC8tiR75hwwq4KSpRBNu97VaZ6WJDXa7Bj2lEyS0ixiVYZAMoAADffAZmRpg6+Qz1Pr5sKXd47UNWaOKEPoh8wK3Ado2ZufeBTKwYF7Gght0D0pwE7AY9V5IpoeX9Z3fVfTxpZ4rXp0LHFwlY2MJxxuXI9MsSye7GFazDPLLJPA7OhG3kl0KI2mS0ZX2gmXq1J/T6uIP0ak+dzzkRpjYkPhlWr5t0UyPxs+eDvx6YtRDoB/kc6rQdfw1OoSh3DH0unEvad5qmz86jM/4udEDKKLMZx9f9g2sE4EJbk77B8wPR44aomGdcsrpHtxGLsmqj5kU= root@m1.example.com'
+    line: "{{ item }}"
+  loop: "{{ keys }}"
