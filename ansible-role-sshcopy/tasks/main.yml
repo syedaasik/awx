@@ -9,7 +9,7 @@
 - name: Ensure authorized_keys file exists, if not create it.
   ansible.builtin.file:
     path: ~/.ssh/authorized_keys
-    state: file
+    state: touch
     mode: '0700'
 
 - name: Copying ssh keys
