@@ -1,7 +1,7 @@
 ---
-- name: Assert play
+- name: copy ssh pub key from awx to client nodes
   hosts: all
   gather_facts: yes
   
   roles:
-    - ansible-role-assert 
+    - ansible-role-sshcopy 
