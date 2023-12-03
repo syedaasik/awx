@@ -1,2 +1,8 @@
 ---
 # tasks file for ansible-role-assert
+- name: 
+  ansible.builtin.assert:
+    that:
+      - ansible_facts['architecture'] == 'x86_64'
+    fail_msg: "Its not the x86_64 machine"
+    success_msg: "Its the x86_64 machine"
