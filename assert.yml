@@ -1,0 +1,7 @@
+---
+- name: Assert play
+  hosts: all
+  gather_facts: yes
+  
+  roles:
+    - ansible-role-assert 
