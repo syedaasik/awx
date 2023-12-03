@@ -1,5 +1,11 @@
 ---
 # tasks file for ansible-role-sshcopy
+- name: Ensure .ssh directory exists, if not create it.
+  ansible.builtin.file:
+    path: ~/.ssh
+    state: directory
+    mode: '0700'
+
 - name: Copying ssh keys
   ansible.builtin.lineinfile:
     path: ~/.ssh/authorized_keys
